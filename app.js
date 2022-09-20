@@ -114,6 +114,7 @@
 const addBtn = document.getElementById("todo-button");
 const todoInput = document.getElementById("todo-input");
 const todoUl = document.getElementById("todo-ul");
+
 addBtn.addEventListener("click", () => {
   if (todoInput.value.trim() === "") {
     alert("please enter new todo");
@@ -123,5 +124,17 @@ addBtn.addEventListener("click", () => {
       completed: false,
       text: todoInput.value.trim(),
     };
+    createListElement = newTodo;
   }
 });
+const createListElement = (newTodo) => {
+  const li_ = document.createElement("li");
+  // li.id = newTodo.id;
+  li.setAttribute("class", newTodo.id);
+
+  const okIcon = document.createElement("i");
+  okIcon.setAttribute("class", "fas fa-check");
+  li.appendChild(okIcon);
+
+  todoUl.appendChild(li);
+};
