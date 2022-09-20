@@ -114,7 +114,14 @@
 const addBtn = document.getElementById("todo-button");
 const todoInput = document.getElementById("todo-input");
 const todoUl = document.getElementById("todo-ul");
-addBtn.addEventListener("click",( ))
-
-
-
+addBtn.addEventListener("click", () => {
+  if (todoInput.value.trim() === "") {
+    alert("please enter new todo");
+  } else {
+    const newTodo = {
+      id: new Date().getTime(),
+      completed: false,
+      text: todoInput.value.trim(),
+    };
+  }
+});
