@@ -32,7 +32,7 @@ addBtn.addEventListener("click", () => {
 });
 
 function createListElement(newTodo) {
-  const { id, completed, text } = newTodo; //!destr.
+  const { id, completed, text } = newTodo; 
 
   const li = document.createElement("li");
   li.setAttribute("id", id);
