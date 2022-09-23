@@ -77,3 +77,17 @@ todoInput.addEventListener("keydown", (e) => {
 window.onload = function () {
   todoInput.focus();
 };
+
+
+
+// todos dizisindeki ilgili elementin completed kismini guncelle
+    todos.map((todo, index) => {
+      if (todo.id == id) {
+        todos[index].completed = !todos[index].completed;
+      }
+    });
+    console.log(todos);
+
+    //?todos dizisinin son halini localStorage'e sakla
+    localStorage.setItem("TODOS", JSON.stringify(todos));
+    
