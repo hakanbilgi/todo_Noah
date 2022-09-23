@@ -10,7 +10,7 @@ const todoUl = document.getElementById("todo-ul");
 // todos dizisini localStorage'daki veriler ile guncelle
 //! eger localStroge'de todos adinda bir item bulunmaz ise bos array atamasi yap.
 let todos = JSON.parse(localStorage.getItem("TODOS")) || [];
-console.log(todos);
+// console.log(todos);
 
 const renderSavedTodos = () => {
   todos.forEach((todo) => {
@@ -70,7 +70,7 @@ function createListElement(newTodo) {
   deleteIcon.setAttribute("class", "fas fa-trash");
   li.appendChild(deleteIcon);
 
-  console.log(li);
+  // console.log(li);
   //? meydana gelen li elementini ul'ye child olarak ata
   todoUl.appendChild(li);
 }
