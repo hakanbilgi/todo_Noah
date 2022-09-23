@@ -37,10 +37,11 @@ addBtn.addEventListener("click", () => {
     todos.push(newTodo);
 
     localStorage.setItem("TODOS", JSON.stringify(todos));
-    console.log(todos);
+    // console.log(todos);
     todoInput.value = "";
   }
 });
+
 
 function createListElement(newTodo) {
   const { id, completed, text } = newTodo; //!destr.
@@ -78,7 +79,7 @@ function createListElement(newTodo) {
 //! Ul elementinin cocuklarindan herhangi birisinden bir event gelirse
 //! bunu tespit et ve gerekini yap. (Capturing)
 todoUl.addEventListener("click", (e) => {
-  console.log(e.target);
+  // console.log(e.target);
 
   const id = e.target.parentElement.getAttribute("id");
   //! event, bir delete butonundan geldi ise
@@ -103,7 +104,7 @@ todoUl.addEventListener("click", (e) => {
         todos[index].completed = !todos[index].completed;
       }
     });
-    console.log(todos);
+    // console.log(todos);
 
     //?todos dizisinin son halini localStorage'e sakla
     localStorage.setItem("TODOS", JSON.stringify(todos));
